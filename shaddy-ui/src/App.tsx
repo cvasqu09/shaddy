@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import { Button } from '@/ui/Button';
+import {
+  NavigationMenu, NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList, NavigationMenuTrigger
+} from '@/ui/NavigationMenu';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,11 +23,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <div className=''> Test</div>
       <h1>Vite + React</h1>
+      <h1>{count}</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <Button variant='default' onClick={() => setCount(count + 1)}>zaddy</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
